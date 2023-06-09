@@ -9,6 +9,7 @@
   width: min-content;
   margin: 0 auto;
   grid-gap: 10px;
+  align-items: center;
 }
 
 @media screen and (max-width: 650px) {
@@ -38,14 +39,12 @@
   background-color: #fff;
   z-index: 20;
   opacity: 0;
-  animation: pulse 2s infinite;
+  animation: white-pulse 2s infinite;
 }
-
 .ImgWrapper.Loaded::before {
   animation: none;
 }
-
-@keyframes pulse {
+@keyframes white-pulse {
   0% {
     opacity: 0;
   }

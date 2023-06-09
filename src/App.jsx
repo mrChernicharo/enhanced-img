@@ -7,9 +7,14 @@ function App() {
     <div className="App">
       <h1>Optimized images</h1>
       <div className="Grid">
-        {images.map(({ img_url, mini_img_url }) => (
+        {images.map(({ img_url, mini_img_url }, i) => (
           <div key={Math.random()}>
-            <LazyImage url={img_url} miniUrl={mini_img_url} />
+            <LazyImage
+              url={img_url}
+              miniUrl={mini_img_url}
+              width={275}
+              height={400}
+            />
           </div>
         ))}
       </div>
@@ -18,7 +23,7 @@ function App() {
 }
 
 function LazyImage(props) {
-  const { url, miniUrl } = props;
+  const { url, miniUrl, width, height } = props;
   const [loaded, setLoaded] = useState(false);
   const imgRef = useRef(null);
 
@@ -27,16 +32,16 @@ function LazyImage(props) {
       className={`ImgWrapper ${loaded ? "Loaded" : ""}`}
       style={{
         backgroundImage: `url(${miniUrl})`,
-        width: 300,
-        height: 200,
+        width,
+        height,
       }}
     >
       <img
         src={url}
         ref={imgRef}
         className={`Img ${loaded ? "Loaded" : ""}`}
-        width={300}
-        height={200}
+        width={width}
+        height={height}
         loading="lazy"
         decoding="async"
         onLoad={(e) => {
