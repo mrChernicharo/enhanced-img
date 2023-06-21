@@ -84,12 +84,8 @@ const imagesSeq = [
 
 const images = [];
 let i = 0;
-while (i < 20) {
-  const seq = [...imagesSeq]
-    // .map((item) => ({ ...item, sort: Math.random() }))
-    // .sort((a, b) => a.sort - b.sort)
-    // .map(({ img_url, mini_img_url, sort }) => ({ img_url, mini_img_url }));
-  images.push(...seq);
+while (i < 2) {
+  images.push(...imagesSeq);
   i++;
 }
 export { images };

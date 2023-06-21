@@ -1,6 +1,16 @@
 .App {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Hero {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  background-color: #343434;
+  width: 100vw;
 }
 
 .Grid {
