@@ -10,9 +10,21 @@ function App() {
         <LazyImage
           url={images[7].img_url}
           miniUrl={images[7].mini_img_url}
-          width={1200}
-          height={600}
+          width={1600}
+          height={540}
         />
+      </div>
+
+      <div className="SubHeading">
+        <div>
+          Check the blurred background and pulsing effect over images that
+          haven't been fully loaded yet
+        </div>
+        <div>You probably won't see much if you're on a good wifi network</div>
+        <div>
+          To simulate a slow network, open your dev tools, go to the network
+          tab, and throttle it a bit
+        </div>
       </div>
 
       <div className="Grid">
@@ -28,7 +40,6 @@ function App() {
         ))}
       </div>
 
-      <h1>Optimized images</h1>
       <div className="Hero">
         <LazyImage
           url={images[3].img_url}
@@ -38,7 +49,6 @@ function App() {
         />
       </div>
 
-      <h1>Optimized images</h1>
       <div className="Hero">
         <LazyImage
           url={images[21].img_url}
